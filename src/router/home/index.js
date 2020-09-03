@@ -1,5 +1,8 @@
 export default {
-  path: '/home',
-  name: 'home',
-  component: () => import('@/views/home')
+	path: '/home',
+	name: 'home',
+	component: () => import('@/views/home'),
+	meta:{
+		istoken:false
+	}
 }

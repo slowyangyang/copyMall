@@ -1,12 +1,22 @@
 module.exports = {
-  chainWebpack: config => {
-    config.module
-      .rule('less')
-      .test(/\.less$/)
-      .use('less-loader')
-      .loader("style-loader")
-      .loader("css-loader")
-      .loader('less-loader')
-        .end()
-  }
+	 configureWebpack: {
+	    resolve: {
+				alias: {
+					'components':'@/components',
+					'assets':'@/assets'
+				}
+			}
+			// devServer: {//跨域配置
+			//     proxy: {
+			// 			'/api':{
+			// 				target:'https://api.apiopen.top',
+			// 				changeOrigin: true,
+			// 				pathRewrite:{
+			// 					'^/api':'https://api.apiopen.top'
+			// 				}
+			// 			}
+			// 		}
+			//   }
+			}
+
 }
